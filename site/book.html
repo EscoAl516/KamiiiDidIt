@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book an Appointment — KamiDidIt</title>
+<meta name="description" content="Book a braiding appointment with Kamia Tolley in Garden City, NY. Pick your style, your day, and hold your chair with a $20 deposit.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="nav site-nav">
+  <a class="nav-brand" href="index.html">KAMIDIDIT</a>
+  <nav class="nav-links">
+    <a href="index.html">Styles</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn btn-primary" href="book.html" aria-current="page">Book</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel" aria-label="Menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <div class="nav-panel" id="navPanel">
+    <a href="index.html">Styles</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn-primary" href="book.html" aria-current="page">Book an appointment</a>
+  </div>
+</header>
+
+<div class="wizard-wrap">
+<div class="wizard-card" data-wizard>
+
+  <div class="wizard-head">
+    <span class="eyebrow" id="stepLabel">STEP 1 OF 4</span>
+    <span class="brand">KAMIDIDIT</span>
+  </div>
+  <div class="wizard-progress"><span class="done"></span><span></span><span></span><span></span></div>
+
+  <!-- STEP 1 — style + length -->
+  <section class="wizard-step" data-step="1">
+    <h3>Pick your style</h3>
+    <p class="step-hint">Not sure on size or length? Pick the style and we will settle the rest in the chair.</p>
+    <div class="style-list">
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="knotless" checked><span class="dot"></span>Knotless Braids</span><span class="hrs">6–8 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="box"><span class="dot"></span>Box Braids</span><span class="hrs">5–7 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="micro"><span class="dot"></span>Micro Braids</span><span class="hrs">8+ hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="senegalese"><span class="dot"></span>Senegalese Twist</span><span class="hrs">5–6 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="fauxlocs"><span class="dot"></span>Faux Locs</span><span class="hrs">6–7 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="butterfly"><span class="dot"></span>Butterfly Locs</span><span class="hrs">6 hrs</span></label>
+      <label class="radio" style="border-bottom:none"><span class="name"><input type="radio" name="bk-style" value="other"><span class="dot"></span>Something else</span><span class="hrs">5 more</span></label>
+    </div>
+    <div class="field-block">
+      <div class="eyebrow">LENGTH</div>
+      <div class="seg" style="width:100%">
+        <label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="bk-len" value="Shoulder">Shoulder</label>
+        <label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="bk-len" value="Mid-back" checked>Mid-back</label>
+        <label class="seg-opt" style="flex:1;justify-content:center"><input type="radio" name="bk-len" value="Waist">Waist</label>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary btn-block blueprint" data-next="2" style="min-height:48px;font-size:16px;margin-top:22px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Continue</button>
+  </section>
+
+  <!-- STEP 2 — day + time -->
+  <section class="wizard-step" data-step="2" hidden>
+    <h3>Pick your day</h3>
+    <p class="step-hint"><span data-sum-style>Knotless Braids, mid-back</span> — <span data-sum-hrs>about 6–8 hrs — only full-day slots show</span>.</p>
+
+    <div class="cal-head">
+      <span class="month">October 2026</span>
+      <span class="arrows"><span class="btn btn-secondary btn-icon" aria-disabled="true" title="Only October is open for booking right now">‹</span><span class="btn btn-secondary btn-icon" aria-disabled="true" title="Only October is open for booking right now">›</span></span>
+    </div>
+    <div class="cal-dow"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+    <div class="cal-grid">
+      <button type="button" class="muted" disabled>28</button><button type="button" data-day="29">29</button><button type="button" class="muted" disabled>30</button><button type="button" data-day="1">1</button><button type="button" data-day="2">2</button><button type="button" data-day="3">3</button><button type="button" data-day="4">4</button>
+      <button type="button" class="muted" disabled>5</button><button type="button" data-day="6">6</button><button type="button" class="muted" disabled>7</button><button type="button" class="muted" disabled>8</button><button type="button" data-day="9">9</button><button type="button" class="selected" data-day="10">10</button><button type="button" data-day="11">11</button>
+      <button type="button" class="muted" disabled>12</button><button type="button" data-day="13">13</button><button type="button" class="muted" disabled>14</button><button type="button" data-day="15">15</button><button type="button" data-day="16">16</button><button type="button" data-day="17">17</button><button type="button" data-day="18">18</button>
+      <button type="button" class="muted" disabled>19</button><button type="button" data-day="20">20</button><button type="button" class="muted" disabled>21</button><button type="button" data-day="22">22</button><button type="button" data-day="23">23</button><button type="button" data-day="24">24</button><button type="button" data-day="25">25</button>
+    </div>
+
+    <div class="eyebrow field-block" data-sum-daylabel>SATURDAY, OCTOBER 10 · START TIME</div>
+    <div class="time-row">
+      <label class="seg-opt blueprint"><input type="radio" name="bk-time" value="10:30 AM" checked>10:30 AM</label>
+      <label class="seg-opt" style="opacity:.45"><input type="radio" name="bk-time" value="11:30 AM" disabled>11:30 AM</label>
+    </div>
+    <p style="font-size:12px;color:var(--color-neutral-600);margin-top:12px">Long styles start at 10:30 so we finish by 6.</p>
+
+    <div style="display:flex;gap:10px;margin-top:14px">
+      <button type="button" class="btn btn-secondary" data-back="1" style="min-height:48px">Back</button>
+      <button type="button" class="btn btn-primary blueprint" data-next="3" style="flex:1;min-height:48px;font-size:16px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Continue</button>
+    </div>
+  </section>
+
+  <!-- STEP 3 — about you -->
+  <section class="wizard-step" data-step="3" hidden>
+    <h3>About you</h3>
+    <p class="step-hint">So I know what to have ready before you sit down.</p>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:14px">
+      <div class="field"><label for="bkName">Name</label><input id="bkName" class="input" style="min-height:44px" placeholder="Your name" required></div>
+      <div class="field"><label for="bkPhone">Phone</label><input id="bkPhone" class="input" type="tel" style="min-height:44px" placeholder="(516) 555-0142" required></div>
+      <div class="field"><label for="bkEmail">Email</label><input id="bkEmail" class="input" type="email" style="min-height:44px" placeholder="you@email.com"></div>
+      <div class="field"><label>Are you bringing your own hair?</label>
+        <div class="seg" style="width:100%"><label class="seg-opt" style="flex:1;justify-content:center;min-height:44px"><input type="radio" name="bk-hair" value="own" checked>Yes</label><label class="seg-opt" style="flex:1;justify-content:center;min-height:44px"><input type="radio" name="bk-hair" value="need">I need hair</label></div>
+      </div>
+      <div class="field"><label for="bkNotes">Anything I should know?</label><textarea id="bkNotes" class="input" placeholder="Tender scalp, a color you want, a length photo — say it here."></textarea></div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:20px">
+      <button type="button" class="btn btn-secondary" data-back="2" style="min-height:48px">Back</button>
+      <button type="button" class="btn btn-primary blueprint" data-next="4" style="flex:1;min-height:48px;font-size:16px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Continue to deposit</button>
+    </div>
+  </section>
+
+  <!-- STEP 4 — deposit -->
+  <section class="wizard-step" data-step="4" hidden>
+    <h3>Hold your chair</h3>
+    <p class="step-hint">A $20 deposit books the day. It comes off your total. Kamia confirms the final price with you before we start.</p>
+    <div class="card blueprint" style="margin-top:14px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <table class="table summary-table"><tbody>
+        <tr><td data-sum-style>Knotless Braids, mid-back</td><td style="text-align:right;color:var(--color-neutral-600)" data-sum-hair>own hair</td></tr>
+        <tr><td data-sum-day>Saturday, Oct 10 · 10:30 AM</td><td style="text-align:right;color:var(--color-neutral-600)" data-sum-length>~7 hrs</td></tr>
+        <tr class="total"><td>Due today</td><td style="text-align:right">$20</td></tr>
+        <tr class="muted"><td>Balance, in salon</td><td style="text-align:right">Quoted at your consult</td></tr>
+      </tbody></table>
+    </div>
+    <p style="font-size:12px;color:var(--color-neutral-600);margin-top:10px">This is a design prototype — no payment is collected or transmitted here.</p>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+      <div class="field"><label for="bkCard">Card number</label><input id="bkCard" class="input" style="min-height:44px" placeholder="•••• •••• •••• ••••" autocomplete="off"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="field"><label for="bkExp">Expiry</label><input id="bkExp" class="input" style="min-height:44px" placeholder="MM / YY" autocomplete="off"></div>
+        <div class="field"><label for="bkCvc">CVC</label><input id="bkCvc" class="input" style="min-height:44px" placeholder="•••" autocomplete="off"></div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--color-neutral-700);margin-top:14px">Deposits are non-refundable, but move once if you tell me 48 hours ahead.</p>
+    <div style="display:flex;gap:10px;margin-top:6px">
+      <button type="button" class="btn btn-secondary" data-back="3" style="min-height:48px">Back</button>
+      <button type="button" class="btn btn-primary blueprint" data-next="5" style="flex:1;min-height:48px;font-size:16px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>Pay $20 and book</button>
+    </div>
+  </section>
+
+  <!-- CONFIRMATION -->
+  <div class="confirm-panel" hidden>
+    <div class="mark">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <h3>Chair held</h3>
+    <p>Kamia will text you to confirm the exact address before <span data-sum-day>Saturday, Oct 10 · 10:30 AM</span>. Reply there with any last details.</p>
+    <a class="btn btn-secondary btn-block" href="index.html" style="margin-top:18px">Back to home</a>
+  </div>
+
+</div>
+</div>
+
+<footer class="site-footer" style="max-width:1280px;margin:0 auto">
+  <span class="nav-brand">KAMIDIDIT</span>
+  <span>@Kamiiididit</span>
+  <span class="copyright">© 2026 Kamia Tolley · Garden City, NY</span>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+  // Keep the STEP n OF 4 label in sync with the visible step (label lives
+  // outside the wizard's own data-* summary hooks, so wire it here).
+  document.addEventListener("DOMContentLoaded", function () {
+    var wizard = document.querySelector("[data-wizard]");
+    var label = document.getElementById("stepLabel");
+    if (!wizard || !label) return;
+    var obs = new MutationObserver(function () {
+      var visible = wizard.querySelector(".wizard-step:not([hidden])");
+      if (visible) label.textContent = "STEP " + visible.dataset.step + " OF 4";
+    });
+    obs.observe(wizard, { attributes: true, attributeFilter: ["hidden"], subtree: true });
+  });
+</script>
+</body>
+</html>
