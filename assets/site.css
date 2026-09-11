@@ -149,6 +149,7 @@ body { max-width: 1280px; margin: 0 auto; }
 .braid-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .card-photo { height: 300px; width: 100%; object-fit: cover; display: block; }
 .card-photo-seat { height: 100%; width: 100%; object-fit: cover; display: block; }
+.card-photo-me {height: 420px; width: 100%; object-fit: cover; display: block;}
 .also-on-menu { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; align-items: center; }
 .also-on-menu .eyebrow { margin-right: 6px; }
 
