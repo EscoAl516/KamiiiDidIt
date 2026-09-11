@@ -45,12 +45,12 @@
     <h3>Pick your style</h3>
     <p class="step-hint">Not sure on size or length? Pick the style and we will settle the rest in the chair.</p>
     <div class="style-list">
-      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="knotless" checked><span class="dot"></span>Knotless Braids</span><span class="hrs">6–8 hrs</span></label>
-      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="box"><span class="dot"></span>Box Braids</span><span class="hrs">5–7 hrs</span></label>
-      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="micro"><span class="dot"></span>Micro Braids</span><span class="hrs">8+ hrs</span></label>
-      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="senegalese"><span class="dot"></span>Senegalese Twist</span><span class="hrs">5–6 hrs</span></label>
-      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="fauxlocs"><span class="dot"></span>Faux Locs</span><span class="hrs">6–7 hrs</span></label>
-      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="butterfly"><span class="dot"></span>Butterfly Locs</span><span class="hrs">6 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="knotless" checked><span class="dot"></span>Knotless Braids</span><span class="hrs" data-hrs-for="knotless">6–8 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="box"><span class="dot"></span>Box Braids</span><span class="hrs" data-hrs-for="box">5–7 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="micro"><span class="dot"></span>Micro Braids</span><span class="hrs" data-hrs-for="micro">8+ hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="senegalese"><span class="dot"></span>Senegalese Twist</span><span class="hrs" data-hrs-for="senegalese">5–6 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="fauxlocs"><span class="dot"></span>Faux Locs</span><span class="hrs" data-hrs-for="fauxlocs">6–7 hrs</span></label>
+      <label class="radio"><span class="name"><input type="radio" name="bk-style" value="butterfly"><span class="dot"></span>Butterfly Locs</span><span class="hrs" data-hrs-for="butterfly">6 hrs</span></label>
       <label class="radio" style="border-bottom:none"><span class="name"><input type="radio" name="bk-style" value="other"><span class="dot"></span>Something else</span><span class="hrs">5 more</span></label>
     </div>
     <div class="field-block">
@@ -70,23 +70,18 @@
     <p class="step-hint"><span data-sum-style>Knotless Braids, mid-back</span> — <span data-sum-hrs>about 6–8 hrs — only full-day slots show</span>.</p>
 
     <div class="cal-head">
-      <span class="month">October 2026</span>
-      <span class="arrows"><span class="btn btn-secondary btn-icon" aria-disabled="true" title="Only October is open for booking right now">‹</span><span class="btn btn-secondary btn-icon" aria-disabled="true" title="Only October is open for booking right now">›</span></span>
+      <span class="month" id="calMonthLabel">&nbsp;</span>
+      <span class="arrows">
+        <button type="button" class="btn btn-secondary btn-icon" id="calPrev" aria-label="Previous month">‹</button>
+        <button type="button" class="btn btn-secondary btn-icon" id="calNext" aria-label="Next month">›</button>
+      </span>
     </div>
     <div class="cal-dow"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
-    <div class="cal-grid">
-      <button type="button" class="muted" disabled>28</button><button type="button" data-day="29">29</button><button type="button" class="muted" disabled>30</button><button type="button" data-day="1">1</button><button type="button" data-day="2">2</button><button type="button" data-day="3">3</button><button type="button" data-day="4">4</button>
-      <button type="button" class="muted" disabled>5</button><button type="button" data-day="6">6</button><button type="button" class="muted" disabled>7</button><button type="button" class="muted" disabled>8</button><button type="button" data-day="9">9</button><button type="button" class="selected" data-day="10">10</button><button type="button" data-day="11">11</button>
-      <button type="button" class="muted" disabled>12</button><button type="button" data-day="13">13</button><button type="button" class="muted" disabled>14</button><button type="button" data-day="15">15</button><button type="button" data-day="16">16</button><button type="button" data-day="17">17</button><button type="button" data-day="18">18</button>
-      <button type="button" class="muted" disabled>19</button><button type="button" data-day="20">20</button><button type="button" class="muted" disabled>21</button><button type="button" data-day="22">22</button><button type="button" data-day="23">23</button><button type="button" data-day="24">24</button><button type="button" data-day="25">25</button>
-    </div>
+    <div class="cal-grid" id="calGrid"></div>
 
-    <div class="eyebrow field-block" data-sum-daylabel>SATURDAY, OCTOBER 10 · START TIME</div>
-    <div class="time-row">
-      <label class="seg-opt blueprint"><input type="radio" name="bk-time" value="10:30 AM" checked>10:30 AM</label>
-      <label class="seg-opt" style="opacity:.45"><input type="radio" name="bk-time" value="11:30 AM" disabled>11:30 AM</label>
-    </div>
-    <p style="font-size:12px;color:var(--color-neutral-600);margin-top:12px">Long styles start at 10:30 so we finish by 6.</p>
+    <div class="eyebrow field-block" data-sum-daylabel>&nbsp;</div>
+    <div class="time-row" id="timeRow"></div>
+    <p style="font-size:12px;color:var(--color-neutral-600);margin-top:12px">Shorter styles free up more start times in the day — longer ones take the whole chair.</p>
 
     <div style="display:flex;gap:10px;margin-top:14px">
       <button type="button" class="btn btn-secondary" data-back="1" style="min-height:48px">Back</button>
