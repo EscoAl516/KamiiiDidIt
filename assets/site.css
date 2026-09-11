@@ -38,49 +38,11 @@
   --shadow-md: 0 3px 10px rgba(27, 25, 21, .16);
   --shadow-lg: 0 12px 32px rgba(27, 25, 21, .22);
 
-  /* Fixed brand ink — the reversed-type band, same in both themes */
+  /* Fixed brand ink — the reversed-type band */
   --color-ink: #2b2418;
   --color-ink-text: #f7f4ee;
 
   --page-pad: 48px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #141310;
-    --color-surface: #1e1c18;
-    --color-text: #f3f0ea;
-    --color-accent: #d9b65a;
-    --color-accent-2: #d9b65a;
-    --color-divider: color-mix(in srgb, #f3f0ea 20%, transparent);
-
-    --color-neutral-100: #252420;
-    --color-neutral-200: #2e2c27;
-    --color-neutral-300: #3c3a34;
-    --color-neutral-400: #6c6a63;
-    --color-neutral-500: #8c8a82;
-    --color-neutral-600: #a8a59c;
-    --color-neutral-700: #c5c1b8;
-    --color-neutral-800: #ded9d0;
-    --color-neutral-900: #f4f1ea;
-
-    --color-accent-100: #2c2413;
-    --color-accent-200: #3a2f18;
-    --color-accent-300: #4c3e1f;
-    --color-accent-400: #6d5a2e;
-    --color-accent-500: #a88b42;
-    --color-accent-600: #e7ca83;
-    --color-accent-700: #e4c576;
-    --color-accent-800: #f3e5bd;
-    --color-accent-900: #1a1509;
-
-    --color-accent-2-100: #2c2413;
-    --color-accent-2-800: #f3e5bd;
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
-    --shadow-md: 0 3px 10px rgba(0, 0, 0, .55);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, .6);
-  }
 }
 
 html { background: var(--color-bg); }
@@ -114,6 +76,7 @@ body { max-width: 1280px; margin: 0 auto; }
   position: relative;
 }
 .site-nav .nav-links { display: flex; align-items: center; gap: var(--space-4); }
+.nav-logo { display: block; height: 52px; width: auto; }
 .nav-toggle {
   display: none;
   margin-left: auto;
@@ -184,6 +147,8 @@ body { max-width: 1280px; margin: 0 auto; }
 .info-strip .value { font-size: 15px; }
 
 .braid-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.card-photo { height: 300px; width: 100%; object-fit: cover; display: block; }
+.card-photo-seat { height: 100%; width: 100%; object-fit: cover; display: block; }
 .also-on-menu { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; align-items: center; }
 .also-on-menu .eyebrow { margin-right: 6px; }
 
